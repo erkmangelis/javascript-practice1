@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>R&P&S</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <header id="score_bar">
+                <div class="wrapper">
+                    <div class="flex">
+                        <h1>Score Board</h1>
+                    </div>
+                    <div class="flex, flex_lower">
+                        <div class="inner_board">
+                            <h2>Sen</h2>
+                            <h2 id="selfScore">{Puan}</h2>
+                        </div>
+                        <div class="inner_board">
+                            <h2>Rakip</h2>
+                            <h2 id="opponentScore">{Puan}</h2>
+                        </div>
+                    </div>
+                </div>
+                
+            </header>
+            <section id="opponent_div">
+                <img id="opponent" src="paper.png" alt="">
+            </section>
+            <section id="player_div">
+                <div class="img-box"><button id="Taş" data-tooltip="Taş" data-tooltip-location="bottom"><img src="rock.png" alt=""></button></div>
+                <div class="img-box"><button id="Kağıt" data-tooltip="Kağıt" data-tooltip-location="bottom"><img src="paper.png" alt=""></button></div>
+                <div class="img-box"><button id="Makas" data-tooltip="Makas" data-tooltip-location="bottom"><img src="scissors.png" alt=""></button></div>
+            </section>
+            <footer>
+                <button id="play_button" onclick="startGame()">Oyna</button>
+            </footer>
+        </main>
+
+    <script src="main.js"></script>
+    </body>
+</html>

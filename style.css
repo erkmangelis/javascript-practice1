@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #252A34;
+}
+
+img {
+    width: 200px;
+    pointer-events: none;
+}
+
+button {
+    border-radius: 40%;
+    border: 5px solid #252A34;
+    background-color: rgba(104, 104, 104, 0.6);
+    cursor: pointer;
+}
+
+.img-box {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin: 50px;
+}
+
+#player_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid #252A34;
+    height: 35vh;
+    background-color: #08d9d68a;
+}
+
+#opponent_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid #252A34;
+    border-top: 5px solid #252A34;
+    height: 35vh;
+    background-color: #ff2e6288;
+}
+
+#score_bar {
+    height: 20vh;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+}
+
+#opponent {
+    border-radius: 40%;
+    border: 5px solid #252A34;
+    background-color: rgba(104, 104, 104, 0.6);
+    width: 200px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+header {
+    background-color: #252A34;
+    border-top: 5px solid #252A34;
+    
+}
+
+main {
+    background-color: #EAEAEA;
+}
+
+footer {
+    background-color: #252A34;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#play_button {
+    width: 10%;
+    border-radius: 5%;
+    border: 5px solid #EAEAEA;
+    background-color: #EAEAEA;
+    height: 50px;
+    font-size: large;
+    color: #252A34;
+}
+
+.inner_board {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper {
+    background-color: #EAEAEA;
+    border-radius: 6px;
+    width: 40%;
+    margin: auto;
+}
+
+.flex_lower {
+    border-top: 2px solid #252A34;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 8px;
+    padding: 5px;
+}
+
+[data-tooltip] {
+    --arrow-size: 5px;
+    position: relative;
+    z-index: 10;
+}
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    left: 50%;
+    bottom: calc(100% + var(--arrow-size));
+    pointer-events: none;
+    transition: 0.1s;
+    will-change: transform;
+}
+
+/* The actual tooltip with a dynamic width */
+[data-tooltip]:before {
+    content: attr(data-tooltip);
+    padding: 10px 18px;
+    min-width: 50px;
+    max-width: 300px;
+    width: max-content;
+    width: -moz-max-content;
+    border-radius: 6px;
+    font-size: 17px;
+    background-color: rgba(104, 104, 104, 0.6);
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+    color: #252A34;
+    text-align: center;
+    white-space: pre-wrap;
+    transform: translate(-50%,  calc(0px - var(--arrow-size))) scale(0.5);
+}
+
+/* Tooltip becomes visible at hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+    visibility: visible;
+    opacity: 1;
+}
+/* Scales from 0.5 to 1 -> grow effect */
+[data-tooltip]:hover:before {
+    transition-delay: 0.3s;
+    transform: translate(-50%, calc(0px - var(--arrow-size))) scale(1);
+}
+
+[data-tooltip-location="bottom"]:before,
+[data-tooltip-location="bottom"]:after {
+    top: calc(100% + var(--arrow-size));
+    bottom: auto;
+}
+
+[data-tooltip-location="bottom"]:before {
+    transform: translate(-50%, var(--arrow-size)) scale(0.5);
+}
+[data-tooltip-location="bottom"]:hover:before {
+    transform: translate(-50%, var(--arrow-size)) scale(1);
+}
+
+[data-tooltip-location="bottom"]:after {
+    border-width: 0px var(--arrow-size) var(--arrow-size) var(--arrow-size);
+    border-color: transparent transparent rgba(104, 104, 104, 0.6) transparent;
+    transform-origin: bottom;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.active {
+    display: flex !important;
+}
